@@ -39,7 +39,7 @@ char *_strdup(const char *str)
 	result = malloc(sizeof(char) * (length + 1));
 	if (!result)
 		return (NULL);
-	for (lenght++; length--;)
+	for (length++; length--;)
 		result[length] = *--str;
 	return (result);
 }
@@ -74,10 +74,10 @@ int _putchar(char c)
 
 	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
 	{
-		write(1, buf, i);
+		write(1, buff, i);
 		i = 0;
 	}
 	if (c != BUF_FLUSH)
-		buf[i++] = c;
+		buff[i++] = c;
 	return (1);
 }

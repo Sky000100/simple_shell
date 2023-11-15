@@ -52,7 +52,7 @@ int _strcmp(char *s1, char *s2)
 char *starts_with(const char *haystack, const char *needle)
 {
 	while (*needle)
-		if (needle++ != *haystack++)
+		if (*needle++ != *haystack++)
 			return (NULL);
 	return ((char *)haystack);
 }
